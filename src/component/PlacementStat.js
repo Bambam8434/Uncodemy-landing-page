@@ -89,39 +89,39 @@ const PlacementStat = () => {
         <h2>Companies that trust Uncodemy learners</h2>
         <div className='company-logo-moving'>
            <marquee><ul id='company-list'>
-            <li className=''><img src={WALMART}/></li>
-            <li className=''><img src={COGNIZANT}/></li>
-            <li className=''><img src={MINDTREE}/></li>
-            <li className=''><img src={CRED}/></li>
-            <li className=''><img src={GOOGLE}/></li>
-            <li className=''><img src={SAMSUNG}/></li>
-            <li className=''><img src={ONEPLUS}/></li>
-            <li className=''><img src={Flipkart}/></li>
-            <li className=''><img src={DUNZO}/></li>
-            <li className=''><img src={UBER}/></li>
-            <li className=''><img src={MEDIANET}/></li>
-            <li className=''><img src={AMAZON}/></li>
-            <li className=''><img src={nvidia}/></li>
-            <li className=''><img src={microsoft}/></li>
-            <li className=''><img src={paytm}/></li>
-            <li className=''><img src={gojek}/></li>
-            <li className=''><img src={ajio}/></li>
-            <li className=''><img src={netflix}/></li>
-            <li className=''><img src={jio}/></li>
-            <li className=''><img src={delhivery}/></li>
-            <li className=''><img src={goldman}/></li>
-            <li className=''><img src={zeta}/></li>
-            <li className=''><img src={phonepe}/></li>
-            <li className=''><img src={infosys}/></li>
-            <li className=''><img src={toppr}/></li>
-            <li className=''><img src={mindtickle}/></li>
-            <li className=''><img src={atlassian}/></li>
-            <li className=''><img src={paysafe}/></li>
-            <li className=''><img src={creditSuisse}/></li>
-            <li className=''><img src={qualcomm}/></li>
-            <li className=''><img src={ola}/></li>
-            <li className=''><img src={hcl}/></li>
-            <li className=''><img src={wakefit}/></li>
+           <span> <li className=''><img src={WALMART}/></li></span>
+           <span> <li className=''><img src={COGNIZANT}/></li></span>
+           <span> <li className=''><img src={MINDTREE}/></li></span>
+           <span> <li className=''><img src={CRED}/></li></span>
+           <span> <li className=''><img src={GOOGLE}/></li></span>
+           <span> <li className=''><img src={SAMSUNG}/></li></span>
+           <span> <li className=''><img src={ONEPLUS}/></li></span>
+           <span> <li className=''><img src={Flipkart}/></li></span>
+           <span> <li className=''><img src={DUNZO}/></li></span>
+           <span> <li className=''><img src={UBER}/></li></span>
+           <span> <li className=''><img src={MEDIANET}/></li></span>
+           <span> <li className=''><img src={AMAZON}/></li></span>
+           <span> <li className=''><img src={nvidia}/></li></span>
+           <span> <li className=''><img src={microsoft}/></li></span>
+           <span> <li className=''><img src={paytm}/></li></span>
+           <span> <li className=''><img src={gojek}/></li></span>
+           <span> <li className=''><img src={ajio}/></li></span>
+           <span> <li className=''><img src={netflix}/></li></span>
+           <span> <li className=''><img src={jio}/></li></span>
+           <span> <li className=''><img src={delhivery}/></li></span>
+           <span> <li className=''><img src={goldman}/></li></span>
+           <span> <li className=''><img src={zeta}/></li></span>
+           <span> <li className=''><img src={phonepe}/></li></span>
+           <span> <li className=''><img src={infosys}/></li></span>
+           <span> <li className=''><img src={toppr}/></li></span>
+           <span> <li className=''><img src={mindtickle}/></li></span>
+           <span> <li className=''><img src={atlassian}/></li></span>
+           <span> <li className=''><img src={paysafe}/></li></span>
+           <span> <li className=''><img src={creditSuisse}/></li></span>
+           <span> <li className=''><img src={qualcomm}/></li></span>
+           <span> <li className=''><img src={ola}/></li></span>
+           <span> <li className=''><img src={hcl}/></li></span>
+           <span> <li className=''><img src={wakefit}/></li></span>
         
             
             </ul> 

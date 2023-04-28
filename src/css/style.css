@@ -7,12 +7,112 @@ body {
   overflow-x: hidden;
 }
 
+marquee {
+  /* background-color: #ddd; */
+  width: 69rem;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+marquee span {
+  display: inline-block;
+  font-size: 20px;
+  position: relative;
+  left: 100%;
+  animation: marquee 50s linear infinite;
+}
+marquee:hover span {
+  animation-play-state: paused;
+}
+
+marquee span:nth-child(1) {
+  animation-delay: 0s;
+}
+marquee span:nth-child(2) {
+  animation-delay: 0.6s;
+}
+marquee span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+marquee span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+marquee span:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+@keyframes marquee {
+  0%   { left: 100%; }
+  100% { left: -100%; }
+}
+
+
+:root {
+  --step--2: clamp(3.13rem, 2.62rem + 2.51vw, 5.76rem);
+  --step--1: clamp(3.75rem, 3.09rem + 3.29vw, 7.20rem);
+  --step-0: clamp(4.50rem, 3.64rem + 4.29vw, 9.00rem);
+}
+/* animations */
+@-webkit-keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes marquee-r {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes marquee-r {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* scroller styles */
+/* marquee {
+  color: #fefefe;
+  overflow: hidden;
+  position: relative;
+  
+} */
+
+
+.admission .container .count img{
+  height:4rem;
+  border-radius: 3rem;
+}
+
+
+
+
+.got-a-ques-summary .container img{
+  height: 23rem;
+ 
+}
 .nav {
     margin-top: 16px;
     width: 100vw;
     position: fixed;
     background: white;
-    z-index: 2;
+    z-index: 5;
+    height: 4rem;
   }
   
   h2 {
@@ -25,6 +125,7 @@ body {
     padding-right: 10%;
     justify-content: space-between;
     padding-left: 10%;
+    height: 4rem;
   }
 
   .header h1 {
@@ -191,8 +292,11 @@ body {
     margin: -50px auto 0 auto;
     display: flex;
     column-gap: 20px;
+    cursor: pointer;
   }
-  
+  .btn-group button{
+    cursor: pointer;
+  }
 #curriculum-btn {
     color: #e95454;
     border: 1px solid #e95454;
@@ -387,9 +491,17 @@ body {
   
   .benefit-thumb {
     margin-bottom: 65px;
-    height: 167px;
+    
   }
   
+  .benefit-thumb h3{
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+margin-top: 15px;
+max-width: 225px;
+  }
   .benefit-thumb img {
     height: 45px;
     width: 46px;
@@ -482,8 +594,8 @@ body {
   
   .creator h2 {
     text-align: center;
-    margin: 0 auto 50px auto;
-    line-height: 40px;
+    margin: 30px auto -25px auto;
+  
     font-size: 30px;
     font-weight: 500;
   }
@@ -788,6 +900,7 @@ body {
     width: 90vw;
     margin: auto;
     overflow: hidden;
+    
   }
   
   .project-card {
@@ -795,13 +908,14 @@ body {
     transition-duration: 0.2s;
     display: flex;
     column-gap: 5%;
+    
   }
   .right {
     cursor: pointer;
   }
   .project-thumb {
     min-width: 22vw;
-    height: 476px;
+    /* height: 476px; */
     background: #f7fafe;
     border: 1px solid #eef1ff;
     border-radius: 12px;
@@ -1069,16 +1183,25 @@ body {
   }
   
   .admission {
+    width: 86vw;
+    margin: auto;
     margin-top: 100px;
     padding: 80px 0;
-    background: #f7fafe;
+    
   }
-  
+  .admission {
+    border-radius: 15px;
+    box-shadow: 0px 0px 18px rgba(2, 177, 253, 0.782);
+    background-image: url(/src/image/bg5.jpg);
+    background-repeat: no-repeat;
+   background-size: cover;
+   opacity: 0.90;
+  }
   .section-heading {
     font-size: 30px;
     line-height: 45px;
     font-weight: 500;
-    color: #111111;
+    color:red;
     margin-bottom: 70px;
   }
   
@@ -1097,6 +1220,7 @@ body {
     position: relative;
     padding-left: 50px;
     padding-right: 50px;
+   
   }
   
   .admission ul li:before {
@@ -1108,6 +1232,7 @@ body {
     width: 1px;
     background: #d9d9d9;
     position: absolute;
+    
   }
   
   .admission ul li .count {
@@ -1122,7 +1247,8 @@ body {
     font-size: 20px;
     line-height: 22px;
     font-weight: 500;
-    color: #111111;
+    color:white;
+    
   }
   
 .admission ul li .content {
@@ -1133,6 +1259,7 @@ body {
     font-weight: 400;
     color: #111111;
     margin-top: 25px;
+  
   }
   
   .admission ul li:last-child::before {
@@ -1536,6 +1663,7 @@ body {
     width: 85vw;
     margin: auto;
     column-gap: 5%;
+    justify-content: space-around;
   }
   .view-btn {
     margin-top: 50px;
@@ -1727,7 +1855,7 @@ body {
       position: absolute;
   }
   .placement-container{
-    background-image: url(/src/image/technology-background-light-lines-and-blur-free-photo.jpg);
+    background-image: url(/src/image/bg.jpg);
     background-size: cover;
     /* opacity: 0.75; */
     /* opacity: 0.80; */
@@ -1789,4 +1917,52 @@ body {
    .module{
      display: none;
    }
-   
+   .review-section {
+    display: flex;
+    flex-direction: column;
+    column-gap: 13px;
+    margin-top: 10px;
+  }
+  
+  .star-review-group{
+    display: flex;
+  }
+  
+  .icon-review-container{
+    display: flex;
+    margin-top: 52px;
+    column-gap: 38px;
+  }
+  
+  .review-section .review-text {
+    color: white;
+  }
+  
+  .star-section {
+    display: flex;
+    column-gap: 5px;
+  }
+  
+  .star-section img {
+    height: 17px;
+    width: 17px;
+  }
+  
+  .company-icon img {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+  }
+  
+  .company-icon {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+  .uncodemy-logo {
+    height: 40px;
+  }
+  
+  /* .header-uncodemy-logo {
+    height: 30px;
+  } */

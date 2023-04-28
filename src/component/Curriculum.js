@@ -34,6 +34,17 @@ const Curriculum = () => {
         }
 
     }
+const showform = ()=>{
+    const formContainer = document.getElementsByClassName('form-container')[0];
+    formContainer.style.visibility = "visible";
+    window.scrollTo({
+        top:60, 
+        left:0,
+        behavior:'smooth'
+        
+    })
+}
+
 
     return (
         <div className='curriculum'>
@@ -239,7 +250,7 @@ const Curriculum = () => {
             </div>
 
             <div className='curi-btn'>
-                <button id='curriculum-btn'><img src="https://www.upgrad.com/bootcamps/images/download.svg" />Download Curriculum</button>
+                <button onClick={showform} id='curriculum-btn'><img src="https://www.upgrad.com/bootcamps/images/download.svg" />Download Curriculum</button>
             </div>
         </div>
     )
