@@ -5,6 +5,7 @@ import trainer  from "../image/tools/trainer.png"
 import lab  from "../image/tools/lab.png"
 import Fees  from "../image/tools/fees.png"
 import Placement  from "../image/tools/placement.png"
+import wa from "../image/wa.svg"
 
 const Bootcamp = () => {
   return (
@@ -58,8 +59,8 @@ const Bootcamp = () => {
 
      <div className='btn-group'>
     
-        <button id='chat-btn'><img src="https://www.upgrad.com/bootcamps/images/icon-sprite-new1.svg" class="icon whatsapp-icon"></img>Chat With Us</button>
-        <button id='call-us-btn'>Call Us</button>
+     <button style={{background:"#ff5421"}}  id='call-us-btn' >  <a style={{color: "white", }} href="tel:+91-770 192 8515">Call Us</a></button>
+        <button id='chat-btn'><img src={wa} class="icon whatsapp-icon"></img><a style={{color: "green"}}  href="https://wa.link/14ytee" target='_blank'>Chat With Us</a></button>
       </div>
 
         </div>

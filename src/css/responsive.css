@@ -78,8 +78,8 @@ max-width: 115px;
       margin: auto;
     }
     .lower-box-right img{
-      width: 60vw;
-      height: 100%;
+      width: 92vw;
+      height: 48vh;
     }
   
     .btn-group {
@@ -199,6 +199,11 @@ max-width: 115px;
       display: grid;
       grid-template-columns: 50% 50%;
     }
+
+    .form-heading-text{
+      font-size: 11px;
+      width: 90%;
+    }
   
     .admission ul li .content {
      
@@ -288,7 +293,37 @@ max-width: 115px;
     .last {
       margin-top: 50px !important;
     }
-  
+  .last-form-main{
+    position: static !important;
+    margin-top: -5rem;
+  }
+  .last-form-main form{
+    display: grid;
+    grid-template-columns: 37vw 37vw;
+    column-gap: 5%;
+   
+  }
+
+  .last-form-container{
+    width: auto;
+    border-radius: 0;
+
+  }
+  /* .got-a-ques-summary{
+    min-height: auto !important;
+    max-height: none !important;
+  } */
+form input{
+  font-size: 12px;
+}
+form select{
+  font-size: 12px;
+  column-gap: 2px;
+}
+.agree-box{
+  font-size: 11px;
+  column-gap: 2px;
+}
     .top-footer .row {
       margin: auto;
     }

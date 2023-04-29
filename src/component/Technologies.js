@@ -20,7 +20,13 @@ import Deep from "../image/tools/Deep Learning.png"
 import NLP from "../image/tools/NLP.jpg"
 import ML from "../image/tools/ML.jpg"
 import SQL from "../image/tools/SQL.png"
+const goToBottom = ()=>{
+    console.log("go to running");
+    const gotoValue = (document.body.scrollHeight)-800;
 
+    console.log("go to = ", gotoValue);
+    window.scrollTo({top:gotoValue, left:0, behavior:'smooth'})
+  }
 const Technologies = () => {
   return (
     <div className='technologies'>
@@ -115,7 +121,7 @@ const Technologies = () => {
         </ul>
 
         <div className='apply-btn'>
-        <button id="call-us-btn">Apply Now</button>
+        <button id='apply-btn' onClick={goToBottom}>Apply Now</button>
         </div>
     </div>
   )

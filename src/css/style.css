@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poltawski+Nowy&family=Poppins&display=swap");
-
+button{
+  cursor: pointer !important;
+}
 body {
   margin: 0;
   padding: 0;
@@ -14,6 +16,11 @@ marquee {
   overflow: hidden;
   white-space: nowrap;
 }
+
+.banner-at-point li img{
+  width: 10px;
+}
+
 marquee span {
   display: inline-block;
   font-size: 20px;
@@ -47,13 +54,13 @@ marquee span:nth-child(5) {
 }
 
 
-:root {
+/* :root {
   --step--2: clamp(3.13rem, 2.62rem + 2.51vw, 5.76rem);
   --step--1: clamp(3.75rem, 3.09rem + 3.29vw, 7.20rem);
   --step-0: clamp(4.50rem, 3.64rem + 4.29vw, 9.00rem);
-}
+} */
 /* animations */
-@-webkit-keyframes marquee {
+/* @-webkit-keyframes marquee {
   from {
     transform: translateX(0);
   }
@@ -84,7 +91,7 @@ marquee span:nth-child(5) {
   to {
     transform: translateX(0);
   }
-}
+} */
 /* scroller styles */
 /* marquee {
   color: #fefefe;
@@ -210,10 +217,60 @@ marquee span:nth-child(5) {
     top: 4px;
     right: 10px;
     color: #ffffff;
-    background-image: url(https://d2o2utebsixu4k.cloudfront.net/assets/icons/osl-sprite.svg);
     width: 6px;
     height: 10px;
     background-position: -2px -19px;
+  }
+
+  .brochure{
+    color: white;
+      background: #ff5421;
+      padding: 0 15px;
+      font-weight: 600;
+      margin: 10px 10px;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      min-height: 40px;
+      position: relative;
+  }
+  
+  .form-heading-text{
+    width: 75%;
+    margin: auto;
+    color: grey;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .agree-box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    column-gap: 10px;
+  }
+  
+  .agree-box input{
+    margin: 0;
+  }
+  
+  .form-container form select{
+    border-radius: 5px;
+      height: 35px;
+      padding: 5px;
+      font-size: 15px;
+      border: 1px solid #f1f1f1;
+      background-color: #f1f1f1;
+      margin-bottom: 20px;
+  }
+
+  .form-container img{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    position:absolute;
+    right: 10px;
+    top: 5px;
   }
   
 .banner-at-point li:last-child {
@@ -227,9 +284,10 @@ marquee span:nth-child(5) {
   
   .banner-lower-box {
     padding-top: 20px;
-    width: 72vw;
+    width: 82vw;
     margin: auto;
     display: flex;
+    column-gap: 5%;
   }
   
   .banner-lower-box .lower-box-left {
@@ -288,7 +346,7 @@ marquee span:nth-child(5) {
   }
   
   .btn-group {
-    width: 72vw;
+    width: 82vw;
     margin: -50px auto 0 auto;
     display: flex;
     column-gap: 20px;
@@ -413,6 +471,26 @@ marquee span:nth-child(5) {
     color: #666666;
     white-space: nowrap;
   }
+/* .last{
+  height: 60vh;
+} */
+
+  .last-form-main{
+    box-shadow:1px 0px 4px 8px rgba(157, 241, 248, 0.381);
+    visibility: visible !important;
+    width: fit-content !important;
+    top: -205px !important;
+   
+  }
+  
+  .last-form-main form{
+    margin-top: 10px !important;
+  
+  }
+  
+
+
+
   
   .company-logo-moving {
     margin-left: auto;
@@ -1400,7 +1478,7 @@ max-width: 225px;
     position: relative;
     margin-top: 100px;
     background: #f7fafe;
-    height: 500px;
+    height: 570px;
     padding: 15px;
   }
   .review-thumb {
@@ -1772,16 +1850,23 @@ max-width: 225px;
 
 
   .form-container {
-    position: absolute;
-    top: 19%;
+    position: relative;    
     left: 0;
     font-family: "Roboto", sans-serif;
     z-index: 2;
     background-color: white;
-    visibility: hidden;
     opacity: 1;
-    min-width: 40vw;
-    margin: 0 28vw;
+   width: 35vw;
+    
+  }
+
+  .form-main{
+    position: absolute;
+    top: 19%;
+    visibility: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   
   .form-container form {

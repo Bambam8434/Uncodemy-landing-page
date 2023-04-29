@@ -86,7 +86,7 @@ const PlacementStat = () => {
         </div>
 
         <div className='company'>
-        <h2>Companies that trust Uncodemy learners</h2>
+        <h2 style={{background:"#ff5421", color:"white",fontWeight:"600", borderRadius:"10px"}}>Companies that trust Uncodemy learners</h2>
         <div className='company-logo-moving'>
            <marquee><ul id='company-list'>
            <span> <li className=''><img src={WALMART}/></li></span>

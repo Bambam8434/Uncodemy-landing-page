@@ -126,8 +126,8 @@ const Creator = () => {
 
 
         creatorDetail.style.top = "60px";
-        projectThumb.style.filter = "blur(1px)";
-        projectThumb.style.backgroundColor = "black";
+        projectThumb.style.filter = "blur(3px)";
+        projectThumb.style.backgroundColor = "#ff5421";
         CreatorImg.style.opacity = "0.4";
         programThummbHr.style.visibility = "visible";
         collegeImg.style.opacity = "0.1";
