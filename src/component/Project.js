@@ -76,7 +76,7 @@ const Project = () => {
     }
     return (
         <div className='project'>
-            <h2>Get a real world understanding through <b>industry projects</b></h2>
+            <h2>Get a real world understanding through <b style={{color:"#ff5421"}}>industry projects</b></h2>
 
             
                 <div className='project-left-arrow arrow-img' onClick={moveImageLeft}>
@@ -91,7 +91,7 @@ const Project = () => {
                 <div className='project-card'>
                     <div class="project-thumb">
                         <img class="project-img" src={technology} alt="Bookshelf" title="Bookshelf" />
-                        <h5 class="proj-title"> News </h5>
+                        <h5 style={{color:"#ff5421"}} class="proj-title"> News </h5>
                         <h3 class="proj-name"> Topic Modeling on News Articles </h3>
                         <p>
                             A social networking application, like Facebook, that allows users to create a curated virtual bookshelf with reviews
@@ -101,7 +101,7 @@ const Project = () => {
 
                     <div class="project-thumb">
                         <img class="project-img" src={Netflix} alt="Bookshelf" title="Bookshelf" />
-                        <h5 class="proj-title"> Netflix </h5>
+                        <h5 style={{color:"#ff5421"}} class="proj-title"> Netflix </h5>
                         <h3 class="proj-name"> Netflix Movies and TV Shows Clustering </h3>
                         <p>
                             A video streaming web app like Netflix, Prime Video or Apple TV+
@@ -111,7 +111,7 @@ const Project = () => {
 
                     <div class="project-thumb">
                         <img class="project-img" src={Company} alt="Bookshelf" title="Bookshelf" />
-                        <h5 class="proj-title"> Company </h5>
+                        <h5 style={{color:"#ff5421"}} class="proj-title"> Company </h5>
                         <h3 class="proj-name"> Company Bankruptcy Prediction </h3>
                         <p>
                             An Amazon clone that allows users to create accounts, wish lists, browse and purchase products
@@ -121,7 +121,7 @@ const Project = () => {
 
                     <div class="project-thumb">
                         <img class="project-img" src={twiter} alt="Bookshelf" title="Bookshelf" />
-                        <h5 class="proj-title"> Coronavirus  </h5>
+                        <h5 style={{color:"#ff5421"}} class="proj-title"> Coronavirus  </h5>
                         <h3 class="proj-name"> Coronavirus Tweet Sentiment Analysis </h3>
                         <p>
                             An Amazon clone that allows users to create accounts, wish lists, browse and purchase products
@@ -131,7 +131,7 @@ const Project = () => {
 
                     <div class="project-thumb">
                         <img class="project-img" src={ book} alt="Bookshelf" title="Bookshelf" />
-                        <h5 class="proj-title"> Books </h5>
+                        <h5 style={{color:"#ff5421"}} class="proj-title"> Learning objectives </h5>
                         <h3 class="proj-name"> Book Recommendation </h3>
                         <p>
                             An Amazon clone that allows users to create accounts, wish lists, browse and purchase products
@@ -141,7 +141,7 @@ const Project = () => {
 
                     <div class="project-thumb">
                         <img class="project-img" src={retail} alt="Bookshelf" title="Bookshelf" />
-                        <h5 class="proj-title"> Retails  </h5>
+                        <h5 style={{color:"#ff5421"}} class="proj-title"> Retails  </h5>
                         <h3 class="proj-name"> Retail Sales Prediction. </h3>
                         <p>
                             An Amazon clone that allows users to create accounts, wish lists, browse and purchase products
@@ -151,7 +151,7 @@ const Project = () => {
 
                     <div class="project-thumb">
                         <img class="project-img" src={tools} alt="Bookshelf" title="Bookshelf" />
-                        <h5 class="proj-title"> Credit Card </h5>
+                        <h5 style={{color:"#ff5421"}} class="proj-title"> Credit Card </h5>
                         <h3 class="proj-name"> Credit Card Default Prediction. </h3>
                         <p>
                             An Amazon clone that allows users to create accounts, wish lists, browse and purchase products

@@ -128,6 +128,7 @@ const Creator = () => {
         creatorDetail.style.top = "60px";
         projectThumb.style.filter = "blur(3px)";
         projectThumb.style.backgroundColor = "#ff5421";
+       
         CreatorImg.style.opacity = "0.4";
         programThummbHr.style.visibility = "visible";
         collegeImg.style.opacity = "0.1";
@@ -160,7 +161,7 @@ const Creator = () => {
 
     return (
         <div className='creator'>
-            <h2>Success <b>Stories</b></h2>
+            <h2>Success <b style={{color:"#ff5421"}}>Stories</b></h2>
 
             <div className='left-arrow arrow-img' onClick={moveImageLeft}>
                 <img src={Left} />

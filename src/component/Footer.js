@@ -32,7 +32,7 @@ const Footer = () => {
                     </div>
                     <div class="col-md-6 offset-md-3">
                     <div className='review-section'>
-                        <div className='star-review-group'>
+                        <div  className='star-review-group'>
                         <div className='star-section'>
                             <img src={star}/>
                             <img src={star}/>
@@ -40,7 +40,7 @@ const Footer = () => {
                             <img src={star}/>
                             <img src={star}/>
                         </div>
-                        <div className='review-text'>
+                        <div  className='review-text'>
                             5 out of 5 based on 15299 votes
                         </div>
                         </div>

@@ -54,8 +54,8 @@ const Last = () => {
       }
 
     return (
-        <div className='last'>
-            <div class="got-a-ques-summary">
+        <div  className='last'>
+            <div  class="got-a-ques-summary">
                 <div class="container ">
                     <img src={contact} alt="Support" title="Support" />
                     <div class="row">

@@ -10,7 +10,7 @@ import wa from "../image/wa.svg"
 const Bootcamp = () => {
   return (
     <div className='bootcamp'>
-     <h2 className='uplift-text'>This Bootcamp Will Uplift Your Career. <b>Here’s How.</b></h2>
+     <h2 className='uplift-text'>This Bootcamp Will Uplift Your Career. <b style={{color:"#ff5421"}}>Here’s How.</b></h2>
 
      <div className='course-summary'>
      <div class="benefit-thumb">

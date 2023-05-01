@@ -8,7 +8,7 @@ const Admission = () => {
     <div className='admission'>
         <div class="container">
 			
-		<h2 style={{color:"white", fontWeight:"700"}} class="section-heading text-center"> Admission <b style={{color:"#ff5421", fontWeight:"700"}}>Process</b></h2>
+		<h2 style={{color:"#ff5421", fontWeight:"700"}} class="section-heading text-center"> Admission <b style={{ color:"white", fontWeight:"700"}}>Process</b></h2>
 		<ul>
 			<li>
 				<span class="count"><img src={step1} alt="" /></span>

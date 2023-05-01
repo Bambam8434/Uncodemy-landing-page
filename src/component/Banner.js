@@ -7,7 +7,7 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import cross from "../image/cross-1.png"
 import rightArrow from "../image/banner-right-arrow.png"
- import banner  from  "../image/ds2.webp"
+ import banner  from  "../image/ds2.png"
 import download from "../image/download.svg"
 import pdfFile from '../image/tools/uncodemy.pdf'
 
@@ -16,6 +16,8 @@ import pdfFile from '../image/tools/uncodemy.pdf'
 
 
 const Banner = () => {
+  const [mode, setMode] = useState('Select the Training Mode');
+const [submitStatus, setSubmitStatus] = useState(true);
    const [name, setName] = useState('');
    const [email, setEmail] = useState('');
    const [phone, setphone] = useState('');
@@ -33,8 +35,24 @@ const Banner = () => {
           
         }
 
+        const checkAgree =()=>{
+
+          const agreeCheck = document.getElementById('term');
+          const submitBtn = document.getElementsByClassName('submit-btn-container')[0];
+            if(agreeCheck.checked){
+  
+              submitBtn.style.opacity="1";
+              setSubmitStatus(false)
+            }
+            else{
+              submitBtn.style.opacity="0.50";
+              setSubmitStatus(true)
+            }
+        }
+
     const hideForm = ()=>{
       
+    
         const formContainer = document.getElementsByClassName('form-main')[0];
         const Banner = document.getElementsByClassName('banner-lower-box')[0];
         formContainer.style.visibility="hidden";
@@ -58,19 +76,19 @@ const Banner = () => {
       alert("Name should be at least four character");
       
      }
-     if(phone.length!=10){
+     else if(phone.length!=10){
       alert("Please enter correct phone no.");
       
      }
-     if(email.length===0){
+     else if(email.length===0){
       alert("Email must be filled");
    
      }
-     if(location.length===0){
+     else if(location.length===0){
       alert("Location must be filled");
     
      }
-
+    
      else{
           const url = 'http://localhost/uncodemy/form-submit.php';
 
@@ -79,6 +97,7 @@ const Banner = () => {
           data.append('email', email);
           data.append('phone', phone);
           data.append('location', location);
+          data.append('mode', mode);
 
           axios.post(url, data).then(window.open(pdfFile, '_blank'))
           .catch(error=>console.log("error"));
@@ -92,7 +111,7 @@ const Banner = () => {
 
      }
     }
-
+    
   
   return (
     <div className='banner'>
@@ -111,17 +130,17 @@ const Banner = () => {
         <input type='email' name='email' placeholder="Enter your Email*" value={email} onChange={(e)=>setEmail(e.target.value)}/>
          <input type='number' name='phone' placeholder="Enter your Phone No." value={phone} onChange={(e)=>setphone(e.target.value)}/>
        <input type='text' name='location'placeholder="Enter your Location"  value={location} onChange={(e)=>setLocation(e.target.value)}/>
-       <select placeholder='select the training mode'>
-        <option disabled selected>Select the Training Mode</option>
-        <option>Online</option>
-        <option>Class room</option>
+       <select placeholder='select the training mode'  onChange={e=>setMode(e.target.value)}>
+        <option disabled selected >Select the Training Mode</option>
+        <option value='online'>Online</option>
+        <option value='classroom'>Class room</option>
        </select>
 
-       <div  className='agree-box'><  input type="checkbox" name="terms" id="terms" required onchange="activateButton(this)" style={{cursor:"pointer"}}/>  I Agree Terms & Coditions
+       <div className='agree-box'><input type="checkbox" name="terms" id="term" required onChange={checkAgree}/>  I Agree Terms & Coditions
        </div>
-        <div className='submit-btn'>
+       <div className='submit-btn-container'>
 
-        <input style={{cursor:"pointer"}} type='submit'  onClick={submitHandle}/>
+       <button disabled={submitStatus} id='submit-btn' onClick={submitHandle}>Submit</button>
         </div>
       </form>
     </div>
@@ -134,23 +153,23 @@ const Banner = () => {
                 <li>Bootcamps</li>
                 
                 <li><img src={rightArrow}/></li>
-                <li>Job Oriented Data Science Bootcamp</li>
+                <li >Job Oriented Data Science Bootcamp</li>
             </ul>
         </div>
 
         <div className='banner-lower-box'>
             <div className='lower-box-left'>
-                <h2>Job Assistance with Interview Opportunity*</h2>
+                <h2 style={{color:"#ff5421"}}>Job Assistance with Interview Opportunity*</h2>
                 <h1>
-                    <span>Job Oriented Data Science</span>
+                    <span style={{color:"#ff5421"}}>Job Oriented Data Science</span>
                     Bootcamp for Fresher and Professional
                 </h1>
                 <p>
-                Earn upto 10LPA on Course Completion - Book Your Seat With As Low As <span id='price-text'>INR 2,000/- only</span>
+                Earn upto 10LPA on Course Completion - Book Your Seat With As Low As <span id='price-text' style={{color:"#ff5421"}}>INR 2,000/- only</span>
                 <strong>Duration of the program- 6 months</strong>
 
-                <span className='cohort-text'>Next Batches Starts From: 01 May, 05 May, 09 May 2023</span>
-                <span className='limited-text'>Limited no. of seats available</span>
+                <span className='cohort-text' style={{color:"#ff5421"}}>Next Batches Starts From: 01 May, 05 May, 09 May 2023</span>
+                <span style={{color:"#ff5421"}} className='limited-text'>Limited no. of seats available</span>
                 </p>
 
            
@@ -162,7 +181,7 @@ const Banner = () => {
         </div>
         <div className='btn-group'>
                 <button id='curriculum-btn' onClick={hideBanner}><img src={download}/>Download Curriculum</button>
-                <button id='apply-btn' onClick={goToBottom}>Apply Now</button>
+                <button style={{background:"#ff5421"}} id='apply-btn' onClick={goToBottom}>Apply Now</button>
                 </div>
         </div>
   )

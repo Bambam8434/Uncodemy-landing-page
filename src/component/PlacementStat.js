@@ -71,7 +71,7 @@ const PlacementStat = () => {
 <div className="hero">
 <div className='placement-box'>
         <div className='placement-box-left'>
-            <h1><b>Placement</b> Stats</h1>
+            <h1><b style={{color:"#ff5421"}}>Placement</b> Stats</h1>
         </div>
         <div className='placement-box-right'>
             <span><b>1350+</b>

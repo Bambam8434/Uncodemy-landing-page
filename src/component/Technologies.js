@@ -30,7 +30,7 @@ const goToBottom = ()=>{
 const Technologies = () => {
   return (
     <div className='technologies'>
-        <h2>Tools and <b>Technologies covered</b></h2>
+        <h2>Tools and <b style={{color:"#ff5421"}}>Technologies covered</b></h2>
 
         <ul>
             <li>

@@ -79,7 +79,7 @@ max-width: 115px;
     }
     .lower-box-right img{
       width: 92vw;
-      height: 48vh;
+      height: 50vh;
     }
   
     .btn-group {
@@ -460,6 +460,7 @@ form select{
       top: 56%;
       min-width: 100%;
       margin: 0;
+    
     }
     .banner-lower-box .lower-box-left{
       margin: 0;
