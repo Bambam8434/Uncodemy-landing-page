@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 
 const Curriculum = () => {
+
     const [prevPoint, setPrevPoint] = useState(0);
 
+        
     const MoveProgress = (point) => {
         const progressBar = document.getElementsByClassName("progress-bar")[0];
         const currentmodule = document.getElementsByClassName('module')[point];
@@ -38,7 +40,7 @@ const Curriculum = () => {
 
     }
     const showform = () => {
-        const formContainer = document.getElementsByClassName('form-container')[0];
+        const formContainer = document.getElementsByClassName('form-main')[0];
         formContainer.style.visibility = "visible";
         window.scrollTo({
             top: 60,
@@ -46,7 +48,9 @@ const Curriculum = () => {
             behavior: 'smooth'
 
         })
+
     }
+
 
 
     return (

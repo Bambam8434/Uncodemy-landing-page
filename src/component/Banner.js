@@ -9,7 +9,7 @@ import cross from "../image/cross-1.png"
 import rightArrow from "../image/banner-right-arrow.png"
  import banner  from  "../image/ds2.png"
 import download from "../image/download.svg"
-import pdfFile from '../image/tools/uncodemy.pdf'
+ import pdfFile from "../image/tools/uncodemy.pdf";
 
 
 
@@ -35,24 +35,12 @@ const [submitStatus, setSubmitStatus] = useState(true);
           
         }
 
-        const checkAgree =()=>{
-
-          const agreeCheck = document.getElementById('term');
-          const submitBtn = document.getElementsByClassName('submit-btn-container')[0];
-            if(agreeCheck.checked){
-  
-              submitBtn.style.opacity="1";
-              setSubmitStatus(false)
-            }
-            else{
-              submitBtn.style.opacity="0.50";
-              setSubmitStatus(true)
-            }
-        }
+      
 
     const hideForm = ()=>{
       
     
+      console.log('hide form is running');
         const formContainer = document.getElementsByClassName('form-main')[0];
         const Banner = document.getElementsByClassName('banner-lower-box')[0];
         formContainer.style.visibility="hidden";
@@ -62,13 +50,21 @@ const [submitStatus, setSubmitStatus] = useState(true);
 
     const goToBottom = ()=>{
       console.log("go to running");
-      const gotoValue = (document.body.scrollHeight)-800;
+      const gotoValue = (document.body.scrollHeight)-1000;
+
+      console.log("go to = ", gotoValue);
+      window.scrollTo({top:gotoValue, left:0, behavior:'smooth'})
+    }
+    const goToUp = ()=>{
+      console.log("go to running");
+      const gotoValue = 75;
 
       console.log("go to = ", gotoValue);
       window.scrollTo({top:gotoValue, left:0, behavior:'smooth'})
     }
 
-    const submitHandle = ()=>{
+    const submitHandle = (event)=>{
+      event.preventDefault()
       console.log("name ",name);
     
      if(name.length<3){
@@ -90,7 +86,7 @@ const [submitStatus, setSubmitStatus] = useState(true);
      }
     
      else{
-          const url = 'http://localhost/uncodemy/form-submit.php';
+          const url = 'https://www.uncodemy.com/Data-Science-BootCamp/form-submit.php';
 
           let data = new FormData();
           data.append('name', name);
@@ -99,17 +95,27 @@ const [submitStatus, setSubmitStatus] = useState(true);
           data.append('location', location);
           data.append('mode', mode);
 
-          axios.post(url, data).then(window.open(pdfFile, '_blank'))
-          .catch(error=>console.log("error"));
-
-          // axios({
-          //   method: 'post',
-          //   url: url,
-          //   data: data
-          // }).then(()=> window.open(pdfFile))
-          // .catch(error=>alert(error));
-
-     }
+          axios.post(url, data)
+          .then(result=>{
+            if(result.data==true){
+              console.log('data submitted')
+              window.location.href=pdfFile ;
+              setName('')
+              setEmail('')
+              setphone('')
+              setLocation('')
+              setMode('')
+            }
+            else{
+              console.log(result)
+              alert('error invalid')
+             
+            }
+          }).catch(error => {
+            console.log('error server not running');
+            alert(error)});
+  
+      }
     }
     
   
@@ -125,22 +131,22 @@ const [submitStatus, setSubmitStatus] = useState(true);
         Submit your details below to learn more about the course fee, curriculum, placements, and more.
         <hr></hr>
         </div>
-      <form>
-        <input type='text' name='name' placeholder="Enter your Name*" value={name} onChange={(e)=>setName(e.target.value)}/>
-        <input type='email' name='email' placeholder="Enter your Email*" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-         <input type='number' name='phone' placeholder="Enter your Phone No." value={phone} onChange={(e)=>setphone(e.target.value)}/>
-       <input type='text' name='location'placeholder="Enter your Location"  value={location} onChange={(e)=>setLocation(e.target.value)}/>
-       <select placeholder='select the training mode'  onChange={e=>setMode(e.target.value)}>
-        <option disabled selected >Select the Training Mode</option>
+        <form method='#' onSubmit={submitHandle}>
+        <input  required type='text' name='name' placeholder="Enter your Name*" value={name} onChange={(e)=>setName(e.target.value)}/>
+        <input  required type='email' name='email' placeholder="Enter your Email*" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+         <input required  type='number' name='phone' placeholder="Enter your Phone No." value={phone} onChange={(e)=>setphone(e.target.value)}/>
+       <input  required type='text' name='location'placeholder="Enter your Location"  value={location} onChange={(e)=>setLocation(e.target.value)}/>
+       <select required  placeholder='select the training mode'  onChange={e=>setMode(e.target.value)}>
+        <option disabled selected value='' >Select the Training Mode</option>
         <option value='online'>Online</option>
         <option value='classroom'>Class room</option>
        </select>
 
-       <div className='agree-box'><input type="checkbox" name="terms" id="term" required onChange={checkAgree}/>  I Agree Terms & Coditions
-       </div>
+       {/* <div className='agree-box'><input type="checkbox" name="terms" id="term" required onChange={checkAgree}/>  I Agree Terms & Coditions
+       </div> */}
        <div className='submit-btn-container'>
 
-       <button disabled={submitStatus} id='submit-btn' onClick={submitHandle}>Submit</button>
+       <input  type='submit' id='submit-btn'/>
         </div>
       </form>
     </div>
@@ -180,11 +186,11 @@ const [submitStatus, setSubmitStatus] = useState(true);
             </div>
         </div>
         <div className='btn-group'>
-                <button id='curriculum-btn' onClick={hideBanner}><img src={download}/>Download Curriculum</button>
+                <button id='curriculum-btn' onClick={()=>{hideBanner();goToUp()}}><img src={download}/>Download Curriculum</button>
                 <button style={{background:"#ff5421"}} id='apply-btn' onClick={goToBottom}>Apply Now</button>
                 </div>
         </div>
   )
 }
 
-export default Banner
+export default  Banner

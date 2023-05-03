@@ -3,6 +3,13 @@ import step1 from '../image/step-1.png'
 import step2 from '../image/step-2.png'
 import step3 from '../image/step-3.png'
 import step4 from '../image/step-4.png'
+const goToBottom = ()=>{
+    console.log("go to running");
+    const gotoValue = (document.body.scrollHeight)-800;
+
+    console.log("go to = ", gotoValue);
+    window.scrollTo({top:gotoValue, left:0, behavior:'smooth'})
+  }
 const Admission = () => {
   return (
     <div className='admission'>
@@ -27,6 +34,10 @@ const Admission = () => {
 				<h3 style={{color:"white", fontWeight:"700"}} class="content">Pay to reserve your seat</h3>
 			</li>
 		</ul>
+		
+        <div className='apply-btn'>
+        <button id='apply-btn' onClick={goToBottom}>Apply Now</button>
+        </div>
 		</div>
 	</div>
     

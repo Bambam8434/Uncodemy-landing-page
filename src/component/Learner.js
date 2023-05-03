@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Left from "../image/left.png";
-import Right from "../image/right.png";
+import Left from "../image/banner-left-arrow.png";
+import Right from "../image/banner-right-arrow.png";
 import star from '../image/star.png'
 import r1 from '../image/r1.jpeg'
 import r2 from '../image/r2.jpeg'
@@ -10,16 +10,16 @@ import r5 from '../image/r5.jpeg'
 import r6 from '../image/r6.jpeg'
 import r7 from '../image/r7.jpeg'
 import r8 from '../image/r8.jpeg'
-import r9 from '../image/r9.jpeg'
+import r9 from '../image/Bharti Dalsus.jpeg'
 import r10 from '../image/r10.jpeg'
 
 const Learner = () => {
 
     const [imageAt, setImageAt] = useState(2);
     const [imageMove, setImageMove] = useState(0);
-
+    const [stopScroll, setStopScroll] =  useState(false);
     useEffect(() => {
-
+        let scrollInterval =null;
         const leftArrow = document.getElementsByClassName('review-left-arrow')[0];
         const RightArrow = document.getElementsByClassName('review-right-arrow')[0];
 
@@ -27,20 +27,63 @@ const Learner = () => {
             leftArrow.style.cursor = "pointer";
             RightArrow.style.cursor = "pointer";
 
-            leftArrow.style.opacity = "1";
-            RightArrow.style.opacity = "1";
+            // leftArrow.style.opacity = "1";
+            // RightArrow.style.opacity = "1";
         }
 
         if (imageAt === 2) {
             leftArrow.style.cursor = "auto";
-            leftArrow.style.opacity = "0.5";
+            // leftArrow.style.opacity = "0.5";
         }
 
         if (imageAt === 10) {
             RightArrow.style.cursor = "auto";
-            RightArrow.style.opacity = "0.5";
+            // RightArrow.style.opacity = "0.5";
+        }
+        // if(document.documentElement.clientWidth >= 901)
+        {
+            const reviews = document.getElementsByClassName('reviews')[0];
+
+      const reviewImage = document.getElementsByClassName('review-thumb');
+
+      let totalItems =  reviewImage.length;   
+        let currentIndex = 1;
+       let nextMove = 38;
+       let direction =1;
+
+
+   if(stopScroll===false){
+
+    scrollInterval = window.setInterval(() => {
+
+    currentIndex = (currentIndex + direction) % (totalItems);
+    console.log('current index ', currentIndex)
+    if (currentIndex === -1) {
+      currentIndex = (totalItems) - 1;
+
+    }
+    reviews.style.transform = `translateX(-${currentIndex * nextMove}vw)`;
+
+    if (currentIndex === (totalItems) - 1 && direction === 1) {
+      direction = -1;
+    } else if (currentIndex === 0 && direction === -1) {
+      direction = 1;
+    }
+  }, 1500)// Change slide every 3 seconds
+  // Change slide every 3 seconds
+ }
+
+ else{
+
+    console.log('else loop =',scrollInterval)
+    window.clearInterval(scrollInterval);
+ }
+
         }
 
+        return () => {
+            window.clearInterval(scrollInterval);
+            }
     }, [imageAt])
 
     const moveImageLeft = () => {
@@ -71,15 +114,31 @@ const Learner = () => {
             setImageAt(currentimage);
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
     return (
+
         <div className='learner'>
-            <h2 class="section-heading text-center"> See what <b style={{color:"#ff5421"}}>Our learners say</b></h2>
-            <div className='review-left-arrow arrow-img' onClick={moveImageLeft}>
+            <h2 class="section-heading text-center"> See what <b style={{ color: "#ff5421" }}>Our learners say</b></h2>
+            {/* <div className='review-left-arrow arrow-img' onClick={moveImageLeft}>
                 <img src={Left} />
-            </div>
+            </div> */}
+             <div className='review-left-arrow arrow-img' onClick={()=>{moveImageLeft();setStopScroll(true)}}>
+                <img src={Left}/>
+                </div>
             <div className='reviews-container'>
                 <div className='reviews'>
-                    <div class="review-thumb">
+                    <div id='img' class="review-thumb">
                         <div class="media">
                             <div class="review-img">
                                 <img src={r1} alt="Mohamed Mufasil Mufeeth" title="Mohamed Mufasil Mufeeth" />
@@ -104,7 +163,7 @@ const Learner = () => {
                         </div>
                     </div>
 
-                    <div class="review-thumb">
+                    <div id='img' class="review-thumb">
                         <div class="media">
                             <div class="review-img">
                                 <img src={r2} alt="Mohamed Mufasil Mufeeth" title="Mohamed Mufasil Mufeeth" />
@@ -129,7 +188,7 @@ const Learner = () => {
                         </div>
                     </div>
 
-                    <div class="review-thumb">
+                    <div id='img' class="review-thumb">
                         <div class="media">
                             <div class="review-img">
                                 <img src={r3} alt="Mohamed Mufasil Mufeeth" title="Mohamed Mufasil Mufeeth" />
@@ -155,7 +214,7 @@ const Learner = () => {
                         </div>
                     </div>
 
-                    <div class="review-thumb">
+                    <div id='img' class="review-thumb">
                         <div class="media">
                             <div class="review-img">
                                 <img src={r4} alt="Mohamed Mufasil Mufeeth" title="Mohamed Mufasil Mufeeth" />
@@ -180,7 +239,7 @@ const Learner = () => {
                         </div>
                     </div>
 
-                    <div class="review-thumb">
+                    <div id='img' class="review-thumb">
                         <div class="media">
                             <div class="review-img">
                                 <img src={r5} alt="Mohamed Mufasil Mufeeth" title="Mohamed Mufasil Mufeeth" />
@@ -207,14 +266,14 @@ const Learner = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="review-thumb">
+                    <div id='img' class="review-thumb">
                         <div class="media">
                             <div class="review-img">
                                 <img src={r6} alt="Mohamed Mufasil Mufeeth" title="Mohamed Mufasil Mufeeth" />
                             </div>
                             <div class="media-body align-self-center">
                                 <div class="review-title">
-                                    <h3> Goddess Parvati </h3>
+                                    <h3> Riya Tiwari </h3>
                                 </div>
                                 <div className="star-img-group">
                                     <img src={star} />
@@ -243,7 +302,7 @@ const Learner = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="review-thumb">
+                    <div id='img' class="review-thumb">
                         <div class="media">
                             <div class="review-img">
                                 <img src={r7} alt="Mohamed Mufasil Mufeeth" title="Mohamed Mufasil Mufeeth" />
@@ -269,14 +328,14 @@ const Learner = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="review-thumb">
+                    <div id='img' class="review-thumb">
                         <div class="media">
                             <div class="review-img">
                                 <img src={r8} alt="Mohamed Mufasil Mufeeth" title="Mohamed Mufasil Mufeeth" />
                             </div>
                             <div class="media-body align-self-center">
                                 <div class="review-title">
-                                    <h3> Manish Kumar </h3>
+                                    <h3> Abhishek Kumar </h3>
                                 </div>
                                 <div className="star-img-group">
                                     <img src={star} />
@@ -294,14 +353,14 @@ const Learner = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="review-thumb">
+                    <div id='img' class="review-thumb">
                         <div class="media">
                             <div class="review-img">
                                 <img src={r9} alt="Mohamed Mufasil Mufeeth" title="Mohamed Mufasil Mufeeth" />
                             </div>
                             <div class="media-body align-self-center">
                                 <div class="review-title">
-                                    <h3> ritu jain </h3>
+                                    <h3> Bharti Dalsus </h3>
                                 </div>
                                 <div className="star-img-group">
                                     <img src={star} />
@@ -322,7 +381,7 @@ const Learner = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="review-thumb">
+                    <div id='img' class="review-thumb">
                         <div class="media">
                             <div class="review-img">
                                 <img src={r10} alt="Mohamed Mufasil Mufeeth" title="Mohamed Mufasil Mufeeth" />
@@ -351,7 +410,8 @@ const Learner = () => {
                 </div>
             </div>
 
-            <div className='review-right-arrow arrow-img' onClick={moveImageRight}>
+            {/* <div className='review-right-arrow arrow-img' onClick={moveImageRight}> */}
+            <div className='review-right-arrow arrow-img'onClick={()=>{moveImageRight();setStopScroll(true)}}>
                 <img src={Right} />
             </div>
         </div>
