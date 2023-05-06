@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Uncodemy-landing-page/static/css/main.d7c776a7.css",
-    "main.js": "/Uncodemy-landing-page/static/js/main.fb468e15.js",
+    "main.css": "/Uncodemy-landing-page/static/css/main.1691c8ca.css",
+    "main.js": "/Uncodemy-landing-page/static/js/main.75024f79.js",
     "static/js/787.7b63f85e.chunk.js": "/Uncodemy-landing-page/static/js/787.7b63f85e.chunk.js",
     "static/media/uncodemy.pdf": "/Uncodemy-landing-page/static/media/uncodemy.86c0570538209232a76e.pdf",
     "static/media/icon-sprite.svg": "/Uncodemy-landing-page/static/media/icon-sprite.cd65990611656a2079e6.svg",
@@ -124,12 +124,12 @@
     "static/media/retail.png": "/Uncodemy-landing-page/static/media/retail.6c5cffd36cca036b878d.png",
     "static/media/download.svg": "/Uncodemy-landing-page/static/media/download.a2609a5c6800ffa2c75c9b9f198459ef.svg",
     "index.html": "/Uncodemy-landing-page/index.html",
-    "main.d7c776a7.css.map": "/Uncodemy-landing-page/static/css/main.d7c776a7.css.map",
-    "main.fb468e15.js.map": "/Uncodemy-landing-page/static/js/main.fb468e15.js.map",
+    "main.1691c8ca.css.map": "/Uncodemy-landing-page/static/css/main.1691c8ca.css.map",
+    "main.75024f79.js.map": "/Uncodemy-landing-page/static/js/main.75024f79.js.map",
     "787.7b63f85e.chunk.js.map": "/Uncodemy-landing-page/static/js/787.7b63f85e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7c776a7.css",
-    "static/js/main.fb468e15.js"
+    "static/css/main.1691c8ca.css",
+    "static/js/main.75024f79.js"
   ]
 }
