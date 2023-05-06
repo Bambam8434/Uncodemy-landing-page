@@ -1,7 +1,3 @@
-// import React, {useState} from 'react'
-// import banner  from  "../image/banner1.jpg";
-// import pdfFile from "../image/tools/uncodemy.pdf";
-// import axios from 'axios';
 
 import React, {useState} from 'react'
 import axios from 'axios'
@@ -50,7 +46,7 @@ const [submitStatus, setSubmitStatus] = useState(true);
 
     const goToBottom = ()=>{
       console.log("go to running");
-      const gotoValue = (document.body.scrollHeight)-1000;
+      const gotoValue = (document.body.scrollHeight)-900;
 
       console.log("go to = ", gotoValue);
       window.scrollTo({top:gotoValue, left:0, behavior:'smooth'})
@@ -135,12 +131,12 @@ const [submitStatus, setSubmitStatus] = useState(true);
         <input  required type='text' name='name' placeholder="Enter your Name*" value={name} onChange={(e)=>setName(e.target.value)}/>
         <input  required type='email' name='email' placeholder="Enter your Email*" value={email} onChange={(e)=>setEmail(e.target.value)}/>
          <input required  type='number' name='phone' placeholder="Enter your Phone No." value={phone} onChange={(e)=>setphone(e.target.value)}/>
-       <input  required type='text' name='location'placeholder="Enter your Location"  value={location} onChange={(e)=>setLocation(e.target.value)}/>
-       <select required  placeholder='select the training mode'  onChange={e=>setMode(e.target.value)}>
+       {/* <input  required type='text' name='location'placeholder="Enter your Location"  value={location} onChange={(e)=>setLocation(e.target.value)}/> */}
+       {/* <select required  placeholder='select the training mode'  onChange={e=>setMode(e.target.value)}>
         <option disabled selected value='' >Select the Training Mode</option>
         <option value='online'>Online</option>
         <option value='classroom'>Class room</option>
-       </select>
+       </select> */}
 
        {/* <div className='agree-box'><input type="checkbox" name="terms" id="term" required onChange={checkAgree}/>  I Agree Terms & Coditions
        </div> */}

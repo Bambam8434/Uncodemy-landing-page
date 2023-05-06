@@ -20,6 +20,7 @@ import Deep from "../image/tools/Deep Learning.png"
 import NLP from "../image/tools/NLP.jpg"
 import ML from "../image/tools/ML.jpg"
 import SQL from "../image/tools/SQL.png"
+import Python from "../image/tools/Python.jpg"
 const goToBottom = ()=>{
     console.log("go to running");
     const gotoValue = (document.body.scrollHeight)-800;
@@ -56,6 +57,10 @@ const Technologies = () => {
             <li>
                     <img src={Numpy}/>
                 <h3>Numpy </h3>
+            </li>
+            <li>
+            <img src={Python}/>
+                <h3>Python</h3>
             </li>
             <li>
             <img src={Pandas}/>

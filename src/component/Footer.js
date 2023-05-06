@@ -88,7 +88,7 @@ const Footer = () => {
             </div>
             <div class="bottom-footer">
                 <p>
-                Uncodemy Copyright © 2023.  All rights reserved.
+                Copyright © 2023.  All rights reserved. <a style={{color:"#ff5421"}} href="">Uncodemy.com</a>
                 </p>
             </div>
         </div>

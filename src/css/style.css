@@ -153,7 +153,6 @@ marquee {
   }
   
   .banner-at-point {
-    width: 100%;
     margin-left: 10%;
   }
   
@@ -172,7 +171,7 @@ marquee {
 .banner-at-point li {
     position: relative;
     line-height: 16px;
-    padding-right: 26px;
+    padding-right: 10px;
     font-size: 12px;
     font-weight: 700;
     color: #666;
@@ -372,7 +371,7 @@ marquee {
   
   .placement-container {
     margin: 40px auto 0 auto;
-    width: 75vw;
+    /* width: 75vw; */
     background: #ffffff;
     box-shadow: 0px 0px 18px rgba(24, 39, 75, 0.05);
     border-radius: 12px;
@@ -393,8 +392,8 @@ marquee {
   
   .placement-box-right {
     display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 60%;
+    grid-template-columns: 57% 47%;
+    column-gap: 45%;
     row-gap: 40%;
   }
   
@@ -443,7 +442,8 @@ marquee {
     box-shadow:1px 0px 4px 8px rgba(157, 241, 248, 0.381);
     visibility: visible !important;
     width: fit-content !important;
-    top: -205px !important;
+    top: -61px !important;
+    right: 11rem !important;
    
   }
   
@@ -1829,13 +1829,14 @@ max-width: 225px;
     z-index: 2;
     background-color: white;
     opacity: 1;
-   width: 35vw;
+   
     
   }
 
   .form-main{
     position: absolute;
     top: 19%;
+    right: 0;
     visibility: hidden;
     width: 100%;
     display: flex;

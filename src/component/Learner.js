@@ -273,7 +273,7 @@ const Learner = () => {
                             </div>
                             <div class="media-body align-self-center">
                                 <div class="review-title">
-                                    <h3> Riya Tiwari </h3>
+                                    <h3> Poonam </h3>
                                 </div>
                                 <div className="star-img-group">
                                     <img src={star} />

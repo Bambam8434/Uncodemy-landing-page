@@ -3,6 +3,10 @@
 .header-btn button{
   font-size: 9px;
 }
+.benefit-thumb h3{
+  font-size: 6px;
+  line-height: 10px;
+}
 }
  
  @media only screen and (max-width: 900px) {
@@ -33,9 +37,9 @@
 
   .benefit-thumb h3{
     height: 40px;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 600;
-    line-height: 20px;
+    line-height: 12px;
 margin-top: 12px;
 max-width: 115px;
   }
@@ -105,7 +109,8 @@ max-width: 115px;
     }
   
     .placement-box-right {
-      column-gap: 30%;
+      grid-template-columns: 47% 38%;
+      column-gap: 20%;
     }
   
     .company {
@@ -548,12 +553,5 @@ max-width:none ;
 
   button{
       padding: 9px 9px;
-  }
-}
-@media screen and (min-width: 901px) and (max-width: 1226px) 
-{
-  .review-section{
-    display: grid;
-    grid-template-columns: 14vw 26vw;
   }
 }
