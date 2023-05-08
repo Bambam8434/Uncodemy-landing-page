@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Uncodemy-landing-page/static/css/main.17419717.css",
-    "main.js": "/Uncodemy-landing-page/static/js/main.00064e8b.js",
+    "main.js": "/Uncodemy-landing-page/static/js/main.34123fe1.js",
     "static/js/787.7b63f85e.chunk.js": "/Uncodemy-landing-page/static/js/787.7b63f85e.chunk.js",
     "static/media/uncodemy.pdf": "/Uncodemy-landing-page/static/media/uncodemy.86c0570538209232a76e.pdf",
     "static/media/icon-sprite.svg": "/Uncodemy-landing-page/static/media/icon-sprite.cd65990611656a2079e6.svg",
@@ -42,6 +42,7 @@
     "static/media/Himanshu Tyagi .jpeg": "/Uncodemy-landing-page/static/media/Himanshu Tyagi .2bfaa45fb3c1da7de2a1.jpeg",
     "static/media/r1.jpeg": "/Uncodemy-landing-page/static/media/r1.52e2521eb7190a6b18e8.jpeg",
     "static/media/Amazon_logo.svg.png": "/Uncodemy-landing-page/static/media/Amazon_logo.svg.c14905338d156db029d6.png",
+    "static/media/riyatiwari1.jpg": "/Uncodemy-landing-page/static/media/riyatiwari1.0327bb623fc1c2bad4c5.jpg",
     "static/media/gojek.png": "/Uncodemy-landing-page/static/media/gojek.4b807095356f00106ee9.png",
     "static/media/srm.jpg": "/Uncodemy-landing-page/static/media/srm.3d9f118ca67601c85a0c.jpg",
     "static/media/qualcomm.png": "/Uncodemy-landing-page/static/media/qualcomm.47f25881a41e096d8441.png",
@@ -125,11 +126,11 @@
     "static/media/download.svg": "/Uncodemy-landing-page/static/media/download.a2609a5c6800ffa2c75c9b9f198459ef.svg",
     "index.html": "/Uncodemy-landing-page/index.html",
     "main.17419717.css.map": "/Uncodemy-landing-page/static/css/main.17419717.css.map",
-    "main.00064e8b.js.map": "/Uncodemy-landing-page/static/js/main.00064e8b.js.map",
+    "main.34123fe1.js.map": "/Uncodemy-landing-page/static/js/main.34123fe1.js.map",
     "787.7b63f85e.chunk.js.map": "/Uncodemy-landing-page/static/js/787.7b63f85e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.17419717.css",
-    "static/js/main.00064e8b.js"
+    "static/js/main.34123fe1.js"
   ]
 }
