@@ -76,7 +76,7 @@ const Project = () => {
     }
     return (
         <div className='project'>
-            <h2>Get a real world understanding through <b style={{ color: "#ff5421" }}>industry projects</b></h2>
+            <h2>Get a real world understanding through <b style={{ color: "#ff5421" }}>Industry Projects</b></h2>
 
 
             <div className='project-left-arrow arrow-img' onClick={moveImageLeft}>
@@ -110,7 +110,12 @@ const Project = () => {
                             <li>
                                 Numpy
                             </li>
-
+                            <li>
+                                Computer Vision
+                            </li>
+                            <li>
+                                Deep Learning
+                            </li>
                         </ul>
                     </div>
 
@@ -200,7 +205,7 @@ const Project = () => {
                     <div class="project-thumb">
                         <img class="project-img" src={book} alt="Bookshelf" title="Bookshelf" />
                         <h5 style={{ color: "#ff5421" }} class="proj-title"> Learning objectives </h5>
-                        <h3 class="proj-name"> Book Recommendation </h3>
+                        <h3 class="proj-name"> Book Recommendation System </h3>
                         <p>
                             In this project we use three different datasets to come up with a book recommendation system for different users based on how they and others have rated previously purchased books.
                         </p>
@@ -214,9 +219,9 @@ const Project = () => {
                             <li>
                                 Machine Learning
                             </li>
-                            <li>
+                            {/* <li>
                                 Collaborative Filtering
-                            </li>
+                            </li> */}
 
 
                         </ul>
@@ -225,7 +230,7 @@ const Project = () => {
                     <div class="project-thumb">
                         <img class="project-img" src={retail} alt="Bookshelf" title="Bookshelf" />
                         <h5 style={{ color: "#ff5421" }} class="proj-title"> Retail Sales  </h5>
-                        <h3 class="proj-name"> Retail Sales Prediction. </h3>
+                        <h3 class="proj-name"> Retail Sales Prediction System. </h3>
                         <p>
                             Rossmann operates over 3,000 drug stores in 7 European countries. Currently, Rossmann store managers are tasked with predicting their daily sales for up to six weeks in advance
                         </p>
@@ -245,15 +250,9 @@ const Project = () => {
                             <li>
                                 SMOTE
                             </li>
-                            <li>
-                                Class Imbalance
-                            </li>
-                            <li>
-                                Deep Learning
-                            </li>
-                            <li>
-                                Computer Vision
-                            </li>
+                          
+                           
+                           
 
 
 
@@ -283,24 +282,8 @@ const Project = () => {
                             <li>
                                 SMOTE
                             </li>
-                            <li>
-                                Class Imbalance
-                            </li>
-                            <li>
-                                Deep Learning
-                            </li>
-                            <li>
-                                Computer Vision
-                            </li>
-                            <li>
-                                Image Preprocessing
-                            </li>
-                            <li>
-                                Transfer Learning
-                            </li>
-                            <li>
-                                Model Deployment
-                            </li>
+                      
+                           
                         </ul>
                     </div>
 

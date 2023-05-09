@@ -40,7 +40,7 @@ const Learner = () => {
             RightArrow.style.cursor = "auto";
             // RightArrow.style.opacity = "0.5";
         }
-        // if(document.documentElement.clientWidth >= 901)
+        if(document.documentElement.clientWidth >= 901)
         {
             const reviews = document.getElementsByClassName('reviews')[0];
 
@@ -273,7 +273,7 @@ const Learner = () => {
                             </div>
                             <div class="media-body align-self-center">
                                 <div class="review-title">
-                                    <h3> Poonam </h3>
+                                    <h3> Riya Tiwari </h3>
                                 </div>
                                 <div className="star-img-group">
                                     <img src={star} />

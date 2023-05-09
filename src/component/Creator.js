@@ -44,7 +44,7 @@ import maruti from "../image/maruti.png"
 import rapidops from "../image/rapidops.png"
 import ibm from "../image/IBM_logo.svg.png"
 import techexactly from "../image/techexactly.jpeg"
-import poonam from "../image/riyatiwari.jpg"
+import poonam from "../image/riyatiwari1.jpg"
 
 
 const Creator = () => {
@@ -68,37 +68,37 @@ const Creator = () => {
             rightArrow.style.cursor = "pointer";
             leftArrow.style.cursor = "pointer";
 
-            rightArrow.style.opacity = "1"
-            leftArrow.style.opacity = "1"
+            // rightArrow.style.opacity = "1"
+            // leftArrow.style.opacity = "1"
 
         }
 
         if (imageAt === 3) {
             leftArrow.style.cursor = "auto";
-            leftArrow.style.opacity = "0.5"
+            // leftArrow.style.opacity = "0.5"
         }
 
         if (imageAt === 9) {
             rightArrow.style.cursor = "auto";
-            rightArrow.style.opacity = "0.5"
+            // rightArrow.style.opacity = "0.5"
         }
         if (imageAt2 > 3 && imageAt2 < 9) {
             secondrightArrow.style.cursor = "pointer";
             secondleftArrow.style.cursor = "pointer";
 
-            secondrightArrow.style.opacity = "1"
-            secondleftArrow.style.opacity = "1"
+            // secondrightArrow.style.opacity = "1"
+            // secondleftArrow.style.opacity = "1"
 
         }
 
         if (imageAt2 === 3) {
             secondleftArrow.style.cursor = "auto";
-            secondleftArrow.style.opacity = "0.5"
+            // secondleftArrow.style.opacity = "0.5"
         }
 
         if (imageAt2 === 9) {
             secondrightArrow.style.cursor = "auto";
-            secondrightArrow.style.opacity = "0.5"
+            // secondrightArrow.style.opacity = "0.5"
         }
 
         if(document.documentElement.clientWidth >= 901)
@@ -109,7 +109,7 @@ const Creator = () => {
     
       let totalItems =  creatorImage.length;   
         currentIndex = 0;
-       let nextMove = 26;
+       let nextMove = 25.5;
        let direction =1;
         
       
@@ -117,7 +117,7 @@ const Creator = () => {
    
     scrollInterval = window.setInterval(() => {
        
-    currentIndex = (currentIndex + direction) % (totalItems/2);
+    currentIndex = (currentIndex + direction) % (totalItems/1);
    
   
     if (currentIndex === -1) {
@@ -271,7 +271,7 @@ const Creator = () => {
 
     return (
         <div className='creator'>
-            <h2>Success <b>Stories</b></h2>
+            <h2>Success <b style={{color:"#ff5421"}}>Stories</b></h2>
 
             <div className='left-arrow arrow-img'>
                 <img src={Left} onClick={()=>{moveImageLeft();setStopScroll(true)}}/>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Uncodemy from "../image/Uncodemy-logo-07.png"
 import star from "../image/star.png"
+import star2 from "../image/star4.png"
 import googleIcon from "../image/google-icon.png"
 import sulekhaIcon from "../image/sulekha-icon.png"
 import facebookIcon from "../image/facebook-icon-2.png"
@@ -38,10 +39,10 @@ const Footer = () => {
                             <img src={star}/>
                             <img src={star}/>
                             <img src={star}/>
-                            <img src={star}/>
+                            <img src={star2}/>
                         </div>
                         <div  className='review-text'>
-                            5 out of 5 based on 15299 votes
+                            4.9 out of 5 based on 10112 votes
                         </div>
                         </div>
                        
@@ -88,7 +89,7 @@ const Footer = () => {
             </div>
             <div class="bottom-footer">
                 <p>
-                Copyright © 2023.  All rights reserved. <a style={{color:"#ff5421"}} href="">Uncodemy.com</a>
+                Copyright © 2023.  All rights reserved. <a style={{color:"#ff5421"}} href="https://www.uncodemy.com/" target='_blank'>Uncodemy.com</a>
                 </p>
             </div>
         </div>

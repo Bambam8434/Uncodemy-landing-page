@@ -12,12 +12,10 @@ import download from "../image/download.svg"
 
 
 const Banner = () => {
-  const [mode, setMode] = useState('Select the Training Mode');
-const [submitStatus, setSubmitStatus] = useState(true);
    const [name, setName] = useState('');
    const [email, setEmail] = useState('');
-   const [phone, setphone] = useState('');
-   const [location, setLocation] = useState('');
+   const [mobile, setMobile] = useState('');
+ 
 
     const hideBanner=()=>{
 
@@ -63,44 +61,26 @@ const [submitStatus, setSubmitStatus] = useState(true);
       event.preventDefault()
       console.log("name ",name);
     
-     if(name.length<3){
     
-      alert("Name should be at least four character");
-      
-     }
-     else if(phone.length!=10){
-      alert("Please enter correct phone no.");
-      
-     }
-     else if(email.length===0){
-      alert("Email must be filled");
-   
-     }
-     else if(location.length===0){
-      alert("Location must be filled");
     
-     }
     
-     else{
-          const url = 'https://www.uncodemy.com/Data-Science-BootCamp/form-submit.php';
+          const url = 'https://gvcloudsecure.com/formSubmit2.php';
 
           let data = new FormData();
           data.append('name', name);
           data.append('email', email);
-          data.append('phone', phone);
-          data.append('location', location);
-          data.append('mode', mode);
+          data.append('mobile', mobile);
+         
 
           axios.post(url, data)
           .then(result=>{
-            if(result.data==true){
+            if(result.data===1){
               console.log('data submitted')
-              window.location.href=pdfFile ;
+              window.open(pdfFile, '_blank');
               setName('')
               setEmail('')
-              setphone('')
-              setLocation('')
-              setMode('')
+              setMobile('')
+              
             }
             else{
               console.log(result)
@@ -111,7 +91,7 @@ const [submitStatus, setSubmitStatus] = useState(true);
             console.log('error server not running');
             alert(error)});
   
-      }
+   
     }
     
   
@@ -130,16 +110,8 @@ const [submitStatus, setSubmitStatus] = useState(true);
         <form method='#' onSubmit={submitHandle}>
         <input  required type='text' name='name' placeholder="Enter your Name*" value={name} onChange={(e)=>setName(e.target.value)}/>
         <input  required type='email' name='email' placeholder="Enter your Email*" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-         <input required  type='number' name='phone' placeholder="Enter your Phone No." value={phone} onChange={(e)=>setphone(e.target.value)}/>
-       {/* <input  required type='text' name='location'placeholder="Enter your Location"  value={location} onChange={(e)=>setLocation(e.target.value)}/> */}
-       {/* <select required  placeholder='select the training mode'  onChange={e=>setMode(e.target.value)}>
-        <option disabled selected value='' >Select the Training Mode</option>
-        <option value='online'>Online</option>
-        <option value='classroom'>Class room</option>
-       </select> */}
-
-       {/* <div className='agree-box'><input type="checkbox" name="terms" id="term" required onChange={checkAgree}/>  I Agree Terms & Coditions
-       </div> */}
+         <input required  type='number' name='mobile' placeholder="Enter your Phone No." value={mobile} onChange={(e)=>setMobile(e.target.value)}/>
+      
        <div className='submit-btn-container'>
 
        <input  type='submit' id='submit-btn'/>
@@ -167,10 +139,10 @@ const [submitStatus, setSubmitStatus] = useState(true);
                     Bootcamp for Fresher and Professional
                 </h1>
                 <p>
-                Earn upto 10LPA on Course Completion - Book Your Seat With As Low As <span id='price-text' style={{color:"#ff5421"}}>INR 2,000/- only</span>
+                Earn upto 10LPA on Course Completion <span id='price-text' style={{color:"#ff5421"}}>Book Your Seat With As Low As INR 2,000/- only</span>
                 <strong>Duration of the program- 6 months</strong>
 
-                <span className='cohort-text' style={{color:"#ff5421"}}>Next Batches Starts From: 01 May, 05 May, 09 May 2023</span>
+                <span className='cohort-text' style={{color:"#ff5421"}}><b style={{color:"black"}}> Next Batches Starts From: </b>10th May, 12th May, 15th May, 17th May & So On.</span>
                 <span style={{color:"#ff5421"}} className='limited-text'>Limited no. of seats available</span>
                 </p>
 

@@ -5,7 +5,7 @@ import step3 from '../image/step-3.png'
 import step4 from '../image/step-4.png'
 const goToBottom = ()=>{
     console.log("go to running");
-    const gotoValue = (document.body.scrollHeight)-800;
+    const gotoValue = (document.body.scrollHeight)-900;
 
     console.log("go to = ", gotoValue);
     window.scrollTo({top:gotoValue, left:0, behavior:'smooth'})

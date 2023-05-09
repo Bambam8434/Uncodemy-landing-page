@@ -40,7 +40,7 @@ body {
 
 marquee {
   /* background-color: #ddd; */
-  width: 69rem;
+  width: 100rem;
   margin: 0 auto;
   overflow: hidden;
   white-space: nowrap;
@@ -65,7 +65,7 @@ marquee {
 
 
 .got-a-ques-summary .container img{
-  height: 23rem;
+  height:390px;
  
 }
 
@@ -140,10 +140,7 @@ marquee {
     border: 1px solid #3fc350;
   }
   
-  .icon {
-    background-image: url(https://www.upgrad.com/bootcamps/images/icon-sprite-new1.svg);
-    background-repeat: no-repeat;
-  }
+
 
   .whatsapp-icon {
     height: 21px;
@@ -281,7 +278,7 @@ marquee {
     line-height: 25px;
     color: #666666;
     font-weight: 400;
-    max-width: 375px;
+    max-width:100%;
   }
   
   .banner-lower-box .lower-box-left p strong {
@@ -312,7 +309,7 @@ marquee {
   
   .btn-group {
     width: 82vw;
-    margin: -50px auto 0 auto;
+    margin: 0px auto 0 auto;
     display: flex;
     column-gap: 20px;
     cursor: pointer;
@@ -335,7 +332,7 @@ marquee {
   
   .lower-box-right {
     width: 578px;
-    height: 400px;
+    /* height: 400px; */
     margin-left: auto;
     border-radius: 10px;
     position: relative;
@@ -386,7 +383,7 @@ marquee {
   }
   
   .placement-box-left h1 {
-    margin: 0;
+  
     font-weight: 500;
   }
   
@@ -443,7 +440,8 @@ marquee {
     visibility: visible !important;
     width: fit-content !important;
     top: -61px !important;
-    right: 11rem !important;
+    right: auto !important;
+    
    
   }
   
@@ -451,7 +449,10 @@ marquee {
     margin-top: 10px !important;
   
   }
-  
+
+  .last-form-main{
+    right: auto !important;
+  }
 
   
 
@@ -963,7 +964,7 @@ max-width: 225px;
   }
   .project-thumb {
     min-width: 22vw;
-    /* height: 476px; */
+    /* height:100%; */
     background: #f7fafe;
     border: 1px solid #eef1ff;
     border-radius: 12px;
@@ -1198,10 +1199,7 @@ max-width: 225px;
     background-color: #e2ffec;
   }
   
-  .icons {
-    background-image: url(https://www.upgrad.com/bootcamps/images/icon-sprite-new1.svg);
-    background-repeat: no-repeat;
-  }
+
   
   .icon-wrong {
     background-position: -391px -785px;
@@ -1384,18 +1382,7 @@ max-width: 225px;
     font-weight: 400;
   }
   
-/* .thumb-3 span::before{
-    background-position: -1px -787px;
-    content: '';
-    background-image: url(https://www.upgrad.com/bootcamps/images/icon-sprite.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 66vw;
-    top: 50%;
-    width: 10px;
-    height: 7px;
-    transform: translateY(-50%);
-} */
+
 
 .thumb-3 button {
     background: #e95454 !important;
@@ -1448,7 +1435,7 @@ max-width: 225px;
     position: relative;
     margin-top: 100px;
     background: #f7fafe;
-    height: 570px;
+    /* height:577px; */
     padding: 15px;
   }
   .review-thumb {
@@ -1506,10 +1493,7 @@ max-width: 225px;
     display: inline-block;
   }
   
-  .icons {
-    background-image: url(https://www.upgrad.com/bootcamps/images/icon-sprite-new1.svg);
-    background-repeat: no-repeat;
-  }
+
   .stars-list {
     display: flex;
     margin-top: 15px;
@@ -1663,44 +1647,8 @@ max-width: 225px;
     background-position: -701px -774px;
   }
   
-  .faq-summary .card .card-header .card-link:before {
-    content: "";
-    position: absolute;
-    top: 35px;
-    right: 0;
-    pointer-events: none;
-    background-position: -603px -773px;
-    width: 37px;
-    height: 37px;
-    background-image: url(https://www.upgrad.com/bootcamps/images/icon-sprite.svg);
-  }
-  .question {
-    width: 85vw;
-    margin: 100px auto 0 auto;
-  }
-  
-  .faq-summary .faq-list.faq-collection .card .card-body {
-    padding: 0 30px 20px 30px;
-    font-size: 16px;
-    color: #666666;
-    line-height: 24px;
-    font-weight: 400;
-  }
-  
-  .faq-summary .faq-list.faq-collection .card .card-body h4 {
-    font-weight: 500;
-    font-size: 16px;
-    color: #111111;
-    position: relative;
-    line-height: 30px;
-  }
-  
-  .faq-summary .faq-list.faq-collection .card .card-body p {
-    margin: 5px 0 18px 0;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 18px;
-    font-size: 14px;
-  }
+
+
   
   .top-footer .row {
     margin: 0;
@@ -1723,24 +1671,7 @@ max-width: 225px;
     color: #e95454 !important;
     border: 1px solid #e95454;
   }
-  /* .company ul { */
-    /* ------------- alternate ways to move compnay image using transition--------------
-    /*  transition-property: transform;
-    transition-timing-function: linear;  */
-    /* animation-name: companyImgMove;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; */
-  /* } */
-  @keyframes companyImgMove {
-    from {
-      transform: translateX(0px);
-    }
-  
-    to {
-      transform: translateX(-4480px);
-    }
-  }
+
   
   .progress {
     height: 2px;
@@ -1829,7 +1760,7 @@ max-width: 225px;
     z-index: 2;
     background-color: white;
     opacity: 1;
-   
+   width: 35vw;
     
   }
 
@@ -1986,15 +1917,15 @@ max-width: 225px;
   .star-review-group{
     display: flex;
     column-gap: 20px;
-    text-align: center;
+    align-items: center;
   font-size: 1.2rem;
    
   }
   
   .icon-review-container{
     display: flex;
-    margin-top: 52px;
-    column-gap: 38px;
+    margin-top: 75px;
+  justify-content: space-between;
     
   }
   

@@ -7,60 +7,56 @@ import pdfFile from "../image/tools/uncodemy.pdf";
 const Last = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [location, setLocation] = useState('');
-    const [mode, setMode] = useState('');
-    const [submitStatus, setSubmitStatus] = useState(true);
+    const [mobile, setMobile] = useState('');
+    // const [submitStatus, setSubmitStatus] = useState(true);
 
-    const checkAgree =()=>{
-        console.log('status ',submitStatus);
-      const agreeCheck = document.getElementById('terms');
-      const submitBtn = document.getElementsByClassName('last-submit-btn-container')[0];
+    // const checkAgree =()=>{
+    //     console.log('status ',submitStatus);
+    //   const agreeCheck = document.getElementById('terms');
+    //   const submitBtn = document.getElementsByClassName('last-submit-btn-container')[0];
       
-      submitBtn.style.opacity="1";
-      setSubmitStatus(false);
+    //   submitBtn.style.opacity="1";
+    //   setSubmitStatus(false);
 
-        if(agreeCheck.checked){
-          submitBtn.style.opacity="1";
-          setSubmitStatus(false)
-        }
-        else{
-            console.log('else is running');
-          submitBtn.style.opacity="0.5";
-          setSubmitStatus(true)
-        }
-    }
+    //     if(agreeCheck.checked){
+    //       submitBtn.style.opacity="1";
+    //       setSubmitStatus(false)
+    //     }
+    //     else{
+    //         console.log('else is running');
+    //       submitBtn.style.opacity="0.5";
+    //       setSubmitStatus(true)
+    //     }
+    // }
 
     const submitHandle = (event)=>{
         event.preventDefault()
         console.log("name ",name);
       
       
-       if(phone.length!=10){
-        alert("Please enter correct phone no.");
+       if(mobile.length!=10){
+        alert("Please enter correct mobile no.");
         
        }
   
        else {
         console.log('form is submitting');
-            const url = 'https://www.uncodemy.com/Data-Science-BootCamp/formSubmit.php';
+            const url = 'https://gvcloudsecure.com/formSubmit2.php';
   
             let data = new FormData();
             data.append('name', name);
             data.append('email', email);
-            data.append('phone', phone);
-            data.append('location', location);
-            data.append('mode', mode);
+            data.append('mobile', mobile);
+           
   
             axios.post(url, data).then(result=>{
-              if(result.data==true){
+              if(result.data===1){
                 console.log('data submitted')
-                window.location.href=pdfFile ;
+                window.open(pdfFile, '_blank');
                 setName('')
                 setEmail('')
-                setPhone('')
-                setLocation('')
-                setMode('')
+                setMobile('')
+                
               }
               else{
                 console.log(result)
@@ -87,7 +83,7 @@ const Last = () => {
             <div class="got-a-ques-summary">
                 <div class="container">
                     <img src={contact} alt="Support" title="Support" />
-                    <div class="row">
+                    <div  class="row">
                         <div class="col-md-6 offset-md-6">
                         <div className='last-form-main form-main'>
         <div className='last-form-container form-container'>
@@ -98,7 +94,7 @@ const Last = () => {
       <form onSubmit={submitHandle} >
         <input required type='text' name='name' placeholder="Enter your Name*" value={name} onChange={(e)=>setName(e.target.value)}/>
         <input required type='email' name='email' placeholder="Enter your Email*" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-         <input required type='number' name='phone' placeholder="Enter your Phone No." value={phone} onChange={(e)=>setPhone(e.target.value)}/>
+         <input required type='number' name='mobile' placeholder="Enter your Phone No." value={mobile} onChange={(e)=>setMobile(e.target.value)}/>
      
         <div className='last-submit-btn-container'>
         <input type='submit' id='submit-btn'/>

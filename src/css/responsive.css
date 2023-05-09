@@ -1,4 +1,8 @@
 
+
+
+
+
 @media only screen and (max-width: 340px) {
 .header-btn button{
   font-size: 9px;
@@ -12,6 +16,9 @@
  @media only screen and (max-width: 900px) {
   .project-thumb .proj-name{
     font-size: 24px;
+  }
+  marquee{
+    max-width: 100rem;
   }
   .star-review-group{
     align-items: center;
@@ -114,7 +121,7 @@ max-width: 115px;
     }
   
     .company {
-      padding: 15px 20px;
+      padding: 15px 30px;
     }
   
     .company h2 {
@@ -306,19 +313,22 @@ max-width: 115px;
     }
   .last-form-main{
     position: static !important;
-    margin-top: -5rem;
+    margin-top: -4rem;
   }
-  .last-form-main form{
+  .learner{
+    height: 450px !important;
+  }
+  /* .last-form-main form{
     display: grid;
     grid-template-columns: 37vw 37vw;
     column-gap: 5%;
    
-  }
+  } */
 
   .last-form-container{
-    width: auto;
+    width: 85vw;
     border-radius: 0;
-
+    height: 20rem;
   }
   /* .got-a-ques-summary{
     min-height: auto !important;
@@ -489,6 +499,12 @@ max-width:none ;
   }
   
   @media screen and (min-width: 883px) and (max-width: 1054px) {
+    .last-form-main{
+/* max-width: 50vw; */
+margin-left: -5rem;
+    }
+
+
     .btn-group {
       margin-top: 0;
     }

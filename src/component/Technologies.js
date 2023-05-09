@@ -23,7 +23,7 @@ import SQL from "../image/tools/SQL.png"
 import Python from "../image/tools/Python.jpg"
 const goToBottom = ()=>{
     console.log("go to running");
-    const gotoValue = (document.body.scrollHeight)-800;
+    const gotoValue = (document.body.scrollHeight)-900;
 
     console.log("go to = ", gotoValue);
     window.scrollTo({top:gotoValue, left:0, behavior:'smooth'})

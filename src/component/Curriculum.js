@@ -55,7 +55,7 @@ const Curriculum = () => {
 
     return (
         <div className='curriculum'>
-            <h2>Learn with a world class <b style={{ color: "#ff5421" }}>curriculum</b></h2>
+            <h2>Learn with a world class <b style={{ color: "#ff5421" }}>Curriculum</b></h2>
 
             <div className='curriculum-list'>
                 <ul>
