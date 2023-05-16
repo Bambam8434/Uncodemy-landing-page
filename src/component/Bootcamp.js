@@ -5,7 +5,7 @@ import trainer  from "../image/tools/trainer.png"
 import lab  from "../image/tools/lab.png"
 import Fees  from "../image/tools/fees.png"
 import Placement  from "../image/tools/placement.png"
-import wa from "../image/wa.svg"
+import wa from "../image/whats-removebg-preview.png"
 
 const Bootcamp = () => {
   return (

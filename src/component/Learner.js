@@ -27,18 +27,18 @@ const Learner = () => {
             leftArrow.style.cursor = "pointer";
             RightArrow.style.cursor = "pointer";
 
-            // leftArrow.style.opacity = "1";
-            // RightArrow.style.opacity = "1";
+            leftArrow.style.opacity = "1";
+            RightArrow.style.opacity = "1";
         }
 
         if (imageAt === 2) {
             leftArrow.style.cursor = "auto";
-            // leftArrow.style.opacity = "0.5";
+            leftArrow.style.opacity = "0.5";
         }
 
         if (imageAt === 10) {
             RightArrow.style.cursor = "auto";
-            // RightArrow.style.opacity = "0.5";
+            RightArrow.style.opacity = "0.5";
         }
         if(document.documentElement.clientWidth >= 901)
         {
@@ -130,9 +130,7 @@ const Learner = () => {
 
         <div className='learner'>
             <h2 class="section-heading text-center"> See what <b style={{ color: "#ff5421" }}>Our learners say</b></h2>
-            {/* <div className='review-left-arrow arrow-img' onClick={moveImageLeft}>
-                <img src={Left} />
-            </div> */}
+          
              <div className='review-left-arrow arrow-img' onClick={()=>{moveImageLeft();setStopScroll(true)}}>
                 <img src={Left}/>
                 </div>
@@ -273,7 +271,7 @@ const Learner = () => {
                             </div>
                             <div class="media-body align-self-center">
                                 <div class="review-title">
-                                    <h3> Riya Tiwari </h3>
+                                    <h3> Abhilasha Rathi </h3>
                                 </div>
                                 <div className="star-img-group">
                                     <img src={star} />
@@ -410,7 +408,7 @@ const Learner = () => {
                 </div>
             </div>
 
-            {/* <div className='review-right-arrow arrow-img' onClick={moveImageRight}> */}
+           
             <div className='review-right-arrow arrow-img'onClick={()=>{moveImageRight();setStopScroll(true)}}>
                 <img src={Right} />
             </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Left from "../image/banner-left-arrow.png";
 import Right from "../image/banner-right-arrow.png";
 import Riya from "../image/riyatiwari.jpg"
-import TANVI from "../image/tanvi.jpg"  
+import TANVI from "../image/Tanvi.png"  
 import Ritesh from "../image/riteshSingh.jpg"
 import ADITYA from "../image/adityaSingh.jpg"
 import RAJENDRA from "../image/rajendra.jpg"
@@ -45,6 +45,15 @@ import rapidops from "../image/rapidops.png"
 import ibm from "../image/IBM_logo.svg.png"
 import techexactly from "../image/techexactly.jpeg"
 import poonam from "../image/riyatiwari1.jpg"
+import rajendra from "../image/rajendra.png"
+import rajendra2 from "../image/rajendra (2).png"
+import integral from "../image/integral.png"
+import runex from "../image/runex.png"
+import mamaearth from "../image/mamaearth.png"
+import ims from "../image/imsghaziabad.png"
+import niit from "../image/niit.png"
+import grelogic from "../image/grelogic (1).png"
+import ripen from "../image/ripensapps.png"
 
 
 const Creator = () => {
@@ -68,37 +77,37 @@ const Creator = () => {
             rightArrow.style.cursor = "pointer";
             leftArrow.style.cursor = "pointer";
 
-            // rightArrow.style.opacity = "1"
-            // leftArrow.style.opacity = "1"
+            rightArrow.style.opacity = "1"
+            leftArrow.style.opacity = "1"
 
         }
 
         if (imageAt === 3) {
             leftArrow.style.cursor = "auto";
-            // leftArrow.style.opacity = "0.5"
+            leftArrow.style.opacity = "0.5"
         }
 
         if (imageAt === 9) {
             rightArrow.style.cursor = "auto";
-            // rightArrow.style.opacity = "0.5"
+            rightArrow.style.opacity = "0.5"
         }
         if (imageAt2 > 3 && imageAt2 < 9) {
             secondrightArrow.style.cursor = "pointer";
             secondleftArrow.style.cursor = "pointer";
 
-            // secondrightArrow.style.opacity = "1"
-            // secondleftArrow.style.opacity = "1"
+            secondrightArrow.style.opacity = "1"
+            secondleftArrow.style.opacity = "1"
 
         }
 
         if (imageAt2 === 3) {
             secondleftArrow.style.cursor = "auto";
-            // secondleftArrow.style.opacity = "0.5"
+            secondleftArrow.style.opacity = "0.5"
         }
 
         if (imageAt2 === 9) {
             secondrightArrow.style.cursor = "auto";
-            // secondrightArrow.style.opacity = "0.5"
+            secondrightArrow.style.opacity = "0.5"
         }
 
         if(document.documentElement.clientWidth >= 901)
@@ -284,9 +293,9 @@ const Creator = () => {
                         <div class="program-thumb">
                             <img class="creator-img" src={Riya} />
                             <div class="program-thumb-content">
-                                <h4> Riya Tiwari </h4>
+                                <h4> Abhilasha Rathi</h4>
                                 <hr className='program-thumb-content-hr-1'></hr>
-                                <p className='college-img'><img src={amity} className='college-img-2' /> &rarr; <img src={wipro} className='college-img-2' /> </p>
+                                <p className='college-img'><img src={amity} className='college-img-2' /> &rarr; <img src={infosys} className='college-img-2' /> </p>
                             </div>
 
                         </div>
@@ -347,9 +356,9 @@ const Creator = () => {
                         <div class="program-thumb">
                             <img class="creator-img" src={TANVI} />
                             <div class="program-thumb-content">
-                                <h4> Tanvi </h4>
+                                <h4> Tanvi Singh</h4>
                                 <hr className='program-thumb-content-hr-1'></hr>
-                                <p className='college-img'><img src={ashoka} className='college-img-2' /> &rarr; <img src={adobe} className='college-img-2' /> </p>
+                                <p className='college-img'><img src={ims} className='college-img-2' /> &rarr; <img src={delloite} className='college-img-2' /> </p>
 
 
                             </div>
@@ -368,9 +377,9 @@ const Creator = () => {
                         <div class="program-thumb">
                             <img class="creator-img" src={poonam} />
                             <div class="program-thumb-content">
-                                <h4> Poonam </h4>
+                                <h4> Riya Tiwari </h4>
                                 <hr className='program-thumb-content-hr-1'></hr>
-                                <p className='college-img'> <img src={indianuniversity} className='college-img-2' /> &rarr;<img src={hcl} className='college-img-2' /> </p>
+                                <p className='college-img'> <img src={integral} className='college-img-2' /> &rarr;<img src={hcl} className='college-img-2' /> </p>
 
                             </div>
                         </div>
@@ -475,7 +484,7 @@ const Creator = () => {
                             <div class="program-thumb-content">
                                 <h4> Abhishek Kumar </h4>
                                 <hr className='program-thumb-content-hr-1'></hr>
-                                <p className='college-img'><img src={galgotias} className='college-img-2' /> &rarr; <img src={tcs} className='college-img-2' /> </p>
+                                <p className='college-img'><img src={runex} className='college-img-2' /> &rarr; <img src={mamaearth} className='college-img-2' /> </p>
                             </div>
 
                         </div>
@@ -497,7 +506,7 @@ const Creator = () => {
                             <div class="program-thumb-content">
                                 <h4> Saurabh Mishra </h4>
                                 <hr className='program-thumb-content-hr-1'></hr>
-                                <p className='college-img'><img src={techno} className='college-img-2' /> &rarr; <img src={kpmg} className='college-img-2' /> </p>
+                                <p className='college-img'><img src={niit} className='college-img-2' /> &rarr; <img src={kpmg} className='college-img-2' /> </p>
 
                             </div>
                         </div>
@@ -517,7 +526,7 @@ const Creator = () => {
                         <div class="program-thumb">
                             <img class="creator-img" src={abhilasha} />
                             <div class="program-thumb-content">
-                                <h4> Abhilasha Rathi </h4>
+                                <h4> Neha Sharma  </h4>
                                 <hr className='program-thumb-content-hr-1'></hr>
                                 <p className='college-img'><img src={sikkim} className='college-img-2' /> &rarr; <img src={infosys} className='college-img-2' /> </p>
 
@@ -540,7 +549,7 @@ const Creator = () => {
                             <div class="program-thumb-content">
                                 <h4> Himanshu Tyagi </h4>
                                 <hr className='program-thumb-content-hr-1'></hr>
-                                <p className='college-img'><img src={srm} className='college-img-2' /> &rarr; <img src={Amazon} className='college-img-2' /> </p>
+                                <p className='college-img'><img src={grelogic} className='college-img-2' /> &rarr; <img src={ripen} className='college-img-2' /> </p>
 
                             </div>
                         </div>
@@ -560,7 +569,7 @@ const Creator = () => {
                             <div class="program-thumb-content">
                                 <h4> Rajendra Yadav </h4>
                                 <hr className='program-thumb-content-hr-1'></hr>
-                                <p className='college-img'> <img src={indianuniversity} className='college-img-2' /> &rarr;<img src={hcl} className='college-img-2' /> </p>
+                                <p className='college-img'> <img src={rajendra} className='college-img-2' /> &rarr;<img src={rajendra2} className='college-img-2' /> </p>
 
                             </div>
                         </div>

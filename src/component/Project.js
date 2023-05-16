@@ -219,9 +219,7 @@ const Project = () => {
                             <li>
                                 Machine Learning
                             </li>
-                            {/* <li>
-                                Collaborative Filtering
-                            </li> */}
+                          
 
 
                         </ul>

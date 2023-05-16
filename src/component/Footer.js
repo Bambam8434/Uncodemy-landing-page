@@ -19,7 +19,7 @@ const Footer = () => {
             <div class="top-footer">
                 <div class="row">
                     <div class="col-md-3">
-                   <a href="https://www.uncodemy.com/" target='_blank'> <img style={{width:"8rem", height:"4rem", textAlign:"center"}} src={Uncodemy} className='uncodemy-logo' /></a>
+                   <img style={{width:"8rem", height:"4rem", textAlign:"center"}} src={Uncodemy} className='uncodemy-logo' />
                      
                         <div class="social-icons">
                        
@@ -89,7 +89,7 @@ const Footer = () => {
             </div>
             <div class="bottom-footer">
                 <p>
-                Copyright © 2023.  All rights reserved. <a style={{color:"#ff5421"}} href="https://www.uncodemy.com/" target='_blank'>Uncodemy.com</a>
+                Copyright © 2023.  All rights reserved. <a style={{color:"#ff5421"}}>Uncodemy</a>
                 </p>
             </div>
         </div>

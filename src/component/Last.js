@@ -1,33 +1,28 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react' 
 import axios from "axios"
-// import pdfFile from '../image/tools/u.png'
+
 import contact from '../image/contact.png'
-import pdfFile from "../image/tools/uncodemy.pdf";
+// import pdfFile from "../image/tools/uncodemy.pdf";
+import Swal from 'sweetalert2'
+
 
 const Last = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [mobile, setMobile] = useState('');
-    // const [submitStatus, setSubmitStatus] = useState(true);
+  
+    const numberOnly =()=> {
+      // Get element by id which passed as parameter within HTML element event
+      var element = document.getElementById('flight_number');
+      // This removes any other character but numbers as entered by user
+      element.value = element.value.replace(/[^0-9]/gi, "");
 
-    // const checkAgree =()=>{
-    //     console.log('status ',submitStatus);
-    //   const agreeCheck = document.getElementById('terms');
-    //   const submitBtn = document.getElementsByClassName('last-submit-btn-container')[0];
-      
-    //   submitBtn.style.opacity="1";
-    //   setSubmitStatus(false);
-
-    //     if(agreeCheck.checked){
-    //       submitBtn.style.opacity="1";
-    //       setSubmitStatus(false)
-    //     }
-    //     else{
-    //         console.log('else is running');
-    //       submitBtn.style.opacity="0.5";
-    //       setSubmitStatus(true)
-    //     }
-    // }
+      if (element.value.length < 10) {
+        element.setCustomValidity('Phone number must have at least 10 digits.');
+      } else {
+        element.setCustomValidity('');
+      }
+  }
 
     const submitHandle = (event)=>{
         event.preventDefault()
@@ -51,8 +46,13 @@ const Last = () => {
   
             axios.post(url, data).then(result=>{
               if(result.data===1){
-                console.log('data submitted')
-                window.open(pdfFile, '_blank');
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Congratulation!',
+                  html:`You are one step closer to become a <span style="color:#ff5124">Data Scientist</span>. Our Team will connect you soon with Detail Information`,
+                  showConfirmButton: false,
+                  timer: 8000
+                })
                 setName('')
                 setEmail('')
                 setMobile('')
@@ -66,12 +66,7 @@ const Last = () => {
             })
             .catch(error=>console.log("error"));
   
-            // axios({
-            //   method: 'post',
-            //   url: url,
-            //   data: data
-            // }).then(()=> window.open(pdfFile))
-            // .catch(error=>alert(error));
+       
   
        }
       }
@@ -94,7 +89,7 @@ const Last = () => {
       <form onSubmit={submitHandle} >
         <input required type='text' name='name' placeholder="Enter your Name*" value={name} onChange={(e)=>setName(e.target.value)}/>
         <input required type='email' name='email' placeholder="Enter your Email*" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-         <input required type='number' name='mobile' placeholder="Enter your Phone No." value={mobile} onChange={(e)=>setMobile(e.target.value)}/>
+        <input required type='tel' maxlength="10" minlength="10" name='mobile' onInput={numberOnly} id="flight_number" placeholder="Enter your Phone No." value={mobile} onChange={(e)=>setMobile(e.target.value)}/>
      
         <div className='last-submit-btn-container'>
         <input type='submit' id='submit-btn'/>

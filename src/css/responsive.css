@@ -81,7 +81,7 @@ max-width: 115px;
     .banner-lower-box {
       width: 100%;
       flex-direction: column;
-      font-size: 9px;
+     
     }
     .banner-lower-box h1, p{
       width: 100%;
@@ -91,13 +91,28 @@ max-width: 115px;
     }
   
     .lower-box-right {
+      width: -moz-fit-content;
       width: fit-content;
       margin: auto;
+      height: auto;
     }
-    .lower-box-right img{
-      width: 92vw;
-      height: 50vh;
-    }
+    .associates-logo {
+      justify-content: space-between;
+      column-gap: 0;
+  }
+  
+  
+  .certified-logo {
+      justify-content: space-between;
+      column-gap: 0;
+  }
+
+  .dash-line {
+    width: 10px;
+  
+}
+
+  
   
     .btn-group {
       margin-top: 12px;
@@ -570,4 +585,11 @@ margin-left: -5rem;
   button{
       padding: 9px 9px;
   }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px){
+.certified-logo {
+    justify-content: space-between;
+    column-gap: 0;
+}
 }
